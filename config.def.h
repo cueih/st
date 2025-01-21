@@ -176,8 +176,7 @@ static MouseShortcut mshortcuts[] = {
 };
 
 /* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
-#define ALTMOD (MODKEY|ShiftMask)
+#define MODKEY ControlMask
 #define TERMMOD (ControlMask|ShiftMask)
 
 static Shortcut shortcuts[] = {
@@ -197,8 +196,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_o,           opencopied,     {.v = "xdg-open"} },
 	{ MODKEY,            	XK_k,     	kscrollup,      {.i = 1} },
 	{ MODKEY,            	XK_j,   	kscrolldown,    {.i = 1} },
-	{ ALTMOD,            	XK_K,     	kscrollup,      {.i = -1} },
-	{ ALTMOD,            	XK_J,   	kscrolldown,    {.i = -1} },
+	{ TERMMOD,            	XK_K,     	kscrollup,      {.i = -1} },
+	{ TERMMOD,            	XK_J,   	kscrolldown,    {.i = -1} },
 	{ MODKEY,               XK_l,           copyurl,        {.i =  0} },
 	{ MODKEY|ShiftMask,     XK_L,           copyurl,        {.i =  1} },
 };
